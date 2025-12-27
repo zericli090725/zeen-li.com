@@ -17,9 +17,6 @@ export default function HomePage() {
 
   return (
     <div className="home">
-      <div id="section-nav" className="section">
-        <Navbar></Navbar>
-      </div>
       <div id="section-hero" className="section">
         
       </div>

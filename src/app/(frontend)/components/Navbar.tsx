@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 
 import {
   Briefcase,
+  Folder,
   FolderGit2,
   GraduationCap,
   HomeIcon,
@@ -27,52 +28,37 @@ const Navbar = () => {
     {
       title: 'Home',
       icon: (
-        <HomeIcon className='h-full w-full ' />
+        <HomeIcon  />
       ),
       href: '/',
     },
     {
+        title: 'Projects',
+        icon: (
+            <Folder className='h-full w-full ' />
+        ),
+        href: '/projects',
+    },
+    {
+        title: 'Hobbies',
+        icon: (
+            <LightbulbIcon className='h-full w-full ' />
+        ),
+        href: '/hobbies',
+    },
+    {
       title: 'About',
       icon: (
-        <User className='h-full w-full ' />
+        <Mail className='h-full w-full ' />
       ),
       href: '/about',
     },
     {
-      title: 'Projects',
+      title: 'Admin',
       icon: (
-        <LightbulbIcon className='h-full w-full ' />
+        <User className='h-full w-full ' />
       ),
-      href: '/projects',
-    },
-    {
-      title: 'Hobbies',
-      icon: (
-        <GraduationCap className='h-full w-full ' />
-      ),
-      href: '/hobbies',
-    },
-    {
-      title: 'Projects',
-      icon: (
-        <FolderGit2 className='h-full w-full ' />
-      ),
-      href: '/projects',
-    },
-   
-    {
-      title: 'Contact us',
-      icon: (
-        <Mail className='h-full w-full ' />
-      ),
-      href: '/contact',
-    },
-    {
-      title: 'More',
-      icon: (
-        <MoreHorizontal className='h-full w-full ' />
-      ),
-      href: '/more',
+      href: '/admin',
     },
   ];
   const [scrolling, setScrolling] = useState(false);
@@ -106,7 +92,7 @@ const Navbar = () => {
           className={cn("aspect-square rounded-full bg-gray-200 dark:bg-neutral-800",pathname === item.href && " bg-gray-100 !border !border-primary-sky")}
           >
           <DockLabel >{item.title}</DockLabel>
-          <DockIcon className={cn(pathname === item.href && "text-[#2f7df4]")}>{item.icon}</DockIcon>
+          <DockIcon className={cn("text-black", pathname === item.href && "text-[#2f7df4]")}>{item.icon}</DockIcon>
         </DockItem>
           </Link>
       ))}

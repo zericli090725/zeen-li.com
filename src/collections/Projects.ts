@@ -86,6 +86,12 @@ export const Projects: CollectionConfig = {
         relationTo: 'media',
         label: 'Video',
         required: false
+    },
+    {
+        type: 'checkbox',
+        name: 'featured',
+        label: 'Featured',
+        required: true
     }
   ],
 }

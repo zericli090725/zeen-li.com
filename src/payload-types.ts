@@ -182,6 +182,7 @@ export interface Project {
   link?: string | null;
   github?: string | null;
   video?: (number | null) | Media;
+  featured: boolean;
   updatedAt: string;
   createdAt: string;
 }
@@ -351,6 +352,7 @@ export interface ProjectsSelect<T extends boolean = true> {
   link?: T;
   github?: T;
   video?: T;
+  featured?: T;
   updatedAt?: T;
   createdAt?: T;
 }

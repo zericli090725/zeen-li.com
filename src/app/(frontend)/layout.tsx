@@ -1,4 +1,6 @@
 import React from 'react'
+import './global.css'
+// import { cn } from '@/lib/utils'
 import './styles.css'
 
 export const metadata = {
@@ -11,7 +13,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
 
   return (
     <html lang="en">
-      <body>
+      <body >
         <main>{children}</main>
       </body>
     </html>
